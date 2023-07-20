@@ -33,7 +33,6 @@ public class LoginController {
 			log.info("----> login EMS..");
 			loginResponse = loginManagementService.loginProcess(loginRequest, httpServletRequest);
 			log.info("---> Cookies : "+httpServletRequest.getSession().getAttribute("jwt_access_token"));
-			log.info("---> Cookies : "+httpServletRequest.getSession().getAttribute("ems_cookies"));
 		} catch (ShoppingCartException e) {
 			log.error("EMS exception: " + e.getMessage());
 			throw e;
