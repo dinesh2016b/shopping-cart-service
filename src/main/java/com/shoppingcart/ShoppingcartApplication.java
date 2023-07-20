@@ -13,13 +13,6 @@ public class ShoppingcartApplication extends SpringBootServletInitializer {
 
 	public static void main(String[] args) {
 		log.info("--------> ShoppingcartApplication started..");
-		SpringApplication springApplication = new SpringApplication(ShoppingcartApplication.class);
-		// springApplication.setBannerMode(Banner.Mode.OFF);
-		springApplication.run(args);
-	}
-
-	@Override
-	protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
-		return application.sources(ShoppingcartApplication.class);
+		SpringApplication.run(ShoppingcartApplication.class, args);
 	}
 }

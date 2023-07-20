@@ -1,5 +1,7 @@
 package com.shoppingcart.controller;
 
+import lombok.AllArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
@@ -15,17 +17,15 @@ import com.shoppingcart.service.LoginManagementService;
 import com.shoppingcart.util.ApplicationConstants;
 
 import jakarta.servlet.http.HttpServletRequest;
-import lombok.extern.slf4j.Slf4j;
 
 @RestController
+@AllArgsConstructor
 @CrossOrigin(origins = "http://localhost:8080", maxAge = 3600, allowCredentials = "true")
 @Slf4j
 public class LoginController {
 
 	@Autowired
 	private LoginManagementService loginManagementService;
-
-
 	@PostMapping(path = ApplicationConstants.ENDPOINT_LOGIN, produces = MediaType.APPLICATION_JSON_VALUE)
 	public ResponseEntity<LoginResponse> login(@RequestBody LoginRequest loginRequest, HttpServletRequest httpServletRequest) throws Exception {
 		LoginResponse loginResponse;

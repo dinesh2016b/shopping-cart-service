@@ -1,7 +1,5 @@
 package com.shoppingcart.exception;
 
-import org.springframework.security.authentication.BadCredentialsException;
-
 public class ShoppingCartException extends Exception {
 
 	private static final long serialVersionUID = 1L;
@@ -29,11 +27,6 @@ public class ShoppingCartException extends Exception {
 		super(throwable);
 		this.errorStatus = errorStatus;
 	}
-
-	public ShoppingCartException(String message, BadCredentialsException e) {
-		super(message);
-	}
-
 	public ErrorStatus getErrorStatus() {
 		return errorStatus;
 	}
