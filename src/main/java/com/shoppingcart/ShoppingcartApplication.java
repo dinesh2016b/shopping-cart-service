@@ -13,7 +13,6 @@ public class ShoppingcartApplication extends SpringBootServletInitializer {
 
 	private static Logger log = LoggerFactory.getLogger(ShoppingcartApplication.class);
 	
-	
 	public static void main(String[] args) {
 		log.info("--------> ShoppingcartApplication started..");
 		SpringApplication.run(ShoppingcartApplication.class, args);
